@@ -18,9 +18,19 @@ services:
     build: 
       context: .
       dockerfile: docker/mysql/Dockerfile
+    environment:
+      - MYSQL_DATABASE = php-site
+      - MYSQL_USER = php-site
+      - MYSQL_PASSWORD = 3465
+      - MYSQL_ALLOW_EMPTY_PASSWORD = 1
+    volumes:
+      - db-data:/var/lib/mysql
     networks:
       - app-network
 
 networks:
   app-network:
-    driver: bridgef
+    driver: bridge
+
+volumes:
+  db-data: {}   #Es ist ein Objekt    
