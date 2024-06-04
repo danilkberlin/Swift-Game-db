@@ -6,14 +6,14 @@ use app\core\Controller;
 class TournamentsController extends Controller {
 
     public function showAction(){
-        echo '<br>' . 'Show slide Tournaments';
+        $this->view->render('Tournaments');
     }
 
     public function listAction(){
-        echo '<br>' . 'List slide Tournaments';
+        $this->view->render('Tournaments List');
     }
 
     public function liveAction(){
-        echo '<br>' . 'Live slide Tournaments';
+        $this->view->render('Tournaments Live');
     }
 }

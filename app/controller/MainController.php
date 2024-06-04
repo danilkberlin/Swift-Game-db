@@ -6,6 +6,6 @@ use app\core\Controller;
 class MainController extends Controller {
 
     public function indexAction(){
-        echo '<br>' . 'Index';
+        $this->view->render('Home');
     }
 }

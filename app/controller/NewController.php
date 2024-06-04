@@ -6,10 +6,10 @@ use app\core\Controller;
 class NewController extends Controller {
 
     public function showAction(){
-        echo '<br>' . 'Show slide News';
+        $this->view->render('News');
     }
 
     public function listAction(){
-        echo '<br>' . 'List slide News';
+        $this->view->render('Newsline');
     }
 }

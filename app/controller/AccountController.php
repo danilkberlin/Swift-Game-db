@@ -5,10 +5,10 @@ use app\core\Controller;
 
 class AccountController extends Controller {
     public function loginAction(){
-        echo '<br>' . 'Login';
+        $this->view->render('Login');
     }
 
     public function registerAction(){
-        echo '<br>' . 'Register';
+        $this->view->render('Registration');
     }
 }
