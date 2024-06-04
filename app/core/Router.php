@@ -35,8 +35,15 @@ class Router
 
     public function run(){
         if ($this->match()) {
-            $controller = 'app\controller\\'. ucfirst( $this->params['controller']).'Controller.php';
-            if (class_exists($controller)){
+            $path = 'app\controller\\'. ucfirst( $this->params['controller']).'Controller';
+            if (class_exists($path)){
+                $action = $this->params['action']. 'Action';
+                if(method_exists($path, $action)){
+                    $controller = new $path;
+                    $controller->$action();
+                }else{
+                    echo 'Error 404';
+                }
                 echo '<br>' . 'Route found';
             }else{
                 echo '<br>' . 'Route not found';
