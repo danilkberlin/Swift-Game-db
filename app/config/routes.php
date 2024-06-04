@@ -6,6 +6,16 @@ return [
         'controller' => 'main',
         'action' => 'index'   
     ],
+    //Admin 
+    'admin/login' => [
+        'controller' => 'admin',
+        'action' => 'login'   
+    ],
+
+    'admin/user' => [
+        'controller' => 'admin',
+        'action' => 'user'   
+    ],
     //Account 
     'account/login' => [
         'controller' => 'account',
