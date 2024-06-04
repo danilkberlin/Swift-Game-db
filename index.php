@@ -10,7 +10,7 @@
             require $path;
         }
     });
-    echo 'Hallo is\'s index.php';
+    //echo 'Hallo is\'s index.php';
 
     
 
