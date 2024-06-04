@@ -1,4 +1,4 @@
-<h3>Log in</h3>
+<h3>Log ut</h3>
 <form >
     <p>Log in</p>
     <p><input type="text"></p>
