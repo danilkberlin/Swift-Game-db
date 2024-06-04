@@ -6,7 +6,7 @@ class Db
 {
 
     function __construct() {
-        echo '<br>' . 'I am class Db.php';
+       // echo '<br>' . 'I am class Db.php';
     }
 
 }

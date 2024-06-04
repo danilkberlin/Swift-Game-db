@@ -10,7 +10,7 @@ class Router
 
  
     public function __construct() {
-        echo '<br>' . 'I am class Router.php';
+        //echo '<br>' . 'I am class Router.php';
         $arr = require 'app/config/routes.php';
         foreach ($arr as $key => $val) {
             $this->add($key, $val);
@@ -42,11 +42,11 @@ class Router
                     $controller = new $path($this->params);
                     $controller->$action();
                 }else{
-                    echo 'Error 404';
+                    //echo 'Error 404';
                 }
-                echo '<br>' . 'Route found';
+                //echo '<br>' . 'Route found';
             }else{
-                echo '<br>' . 'Route not found';
+                //echo '<br>' . 'Route not found';
             }
             //echo '<br>' . 'Route found';
         }else{
