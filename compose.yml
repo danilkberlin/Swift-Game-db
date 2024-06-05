@@ -10,27 +10,30 @@ services:
       - ./index.php:/var/www/html/index.php
     ports:
       - 8080:80
-    networks:
-      - app-network
+    depends_on:
+      - databank
 
 
   databank:
-    build: 
-      context: .
-      dockerfile: docker/mysql/Dockerfile
+    image: mysql:5.7
     environment:
-      - MYSQL_DATABASE = php-site
-      - MYSQL_USER = php-site
-      - MYSQL_PASSWORD = 3465
-      - MYSQL_ALLOW_EMPTY_PASSWORD = 1
-    volumes:
-      - db-data:/var/lib/mysql
-    networks:
-      - app-network
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
 
-networks:
-  app-network:
-    driver: bridge
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+    depends_on:
+      - databank
 
 volumes:
   db-data: {}   #Es ist ein Objekt    
