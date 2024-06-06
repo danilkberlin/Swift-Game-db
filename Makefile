@@ -20,7 +20,7 @@ help:
 
 .PHONY: setup
 setup: ##@general Build and start all containers
-	@docker-compose up -d
+	@docker-compose up --build
 
 .PHONY: start
 start: ##@general Start all containers
