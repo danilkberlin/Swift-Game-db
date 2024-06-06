@@ -59,5 +59,9 @@ return [
     'tournaments/live' => [
         'controller' => 'tournaments',
         'action' => 'live'   
+    ],
+    'user/user' => [
+        'controller' => 'user',
+        'action' => 'index' 
     ]
 ];
