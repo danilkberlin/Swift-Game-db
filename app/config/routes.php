@@ -62,6 +62,6 @@ return [
     ],
     'user/user' => [
         'controller' => 'user',
-        'action' => 'index' 
+        'action' => 'index'
     ]
 ];

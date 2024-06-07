@@ -1,44 +1,20 @@
 <?php
 
-class User{
+namespace app\model;
+use app\core\Model;
+use app\lib\Db;
 
-    $id = 0;
-    $email = '';
+class User extends Model{
+
+    public function addEmail(){
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $email = $_POST['email'];
+            $db = new Db();
+            if ($db->insertEmail($email)) {
+                echo "Email post!";
+            } else {
+                echo "Error 0000";
+            }
+        }
+    }
 }
-
-
-class UserRepository{
-    public function  fetchAll () {
-        $servername = "databank"; // Use the service name defined in docker-compose.yml
-        $username = "user";
-        $password = "password";
-        $dbname = "mydatabase";
-
-        $dbh = new PDO('mysql:host='.$servername.';dbname='.$dbname.'', $username, $password);
-
-
-
-        // Prepare and execute the SQL query
-        $stmt = $dbh->prepare("SELECT * FROM user");
-        $stmt->execute();
-
-        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function  fetchById () {
-        $servername = "databank"; // Use the service name defined in docker-compose.yml
-        $username = "user";
-        $password = "password";
-        $dbname = "mydatabase";
-
-        $dbh = new PDO('mysql:host='.$servername.';dbname='.$dbname.'', $username, $password);
-
-
-
-        // Prepare and execute the SQL query
-        $stmt = $dbh->prepare("SELECT * FROM user");
-        $stmt->execute();
-
-        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-} 
