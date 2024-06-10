@@ -14,6 +14,10 @@ class AdminController extends Controller {
         $vars = [
             'users' => $result,
         ];
+        if(isset($_POST['user_id'])) {
+            $user_id = $_POST['user_id'];
+            $delete = $this->model->deleteUser($user_id);
+        }
         $this->view->render('Adnim User', $vars);
     }
 }
