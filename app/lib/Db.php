@@ -32,5 +32,9 @@ class Db {
        $result->bindParam(':email', $email, PDO::PARAM_STR);
        return $result->execute();
     }
+    
+    public function getConnection(){
+        return $this->db;
+    }
 
 }
