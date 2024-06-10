@@ -63,5 +63,9 @@ return [
     'user/user' => [
         'controller' => 'user',
         'action' => 'index'
+    ],
+    'user/register' => [
+        'controller' => 'user',
+        'action' => 'register'
     ]
 ];
