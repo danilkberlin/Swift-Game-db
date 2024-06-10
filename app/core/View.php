@@ -16,6 +16,7 @@ class View{
     }
 
     public function render($title, $vars = []){
+        extract($vars);
         ob_start();
         require 'app/view/'.$this->path.'.php';
         $content = ob_get_clean();

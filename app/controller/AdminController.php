@@ -10,6 +10,10 @@ class AdminController extends Controller {
     }
 
     public function userAction(){
-        $this->view->render('Adnim User');
+        $result = $this->model->getUser();
+        $vars = [
+            'users' => $result,
+        ];
+        $this->view->render('Adnim User', $vars);
     }
 }
