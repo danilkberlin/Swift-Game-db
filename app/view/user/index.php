@@ -1,9 +1,3 @@
-<!-- <ol>
-    <li>Zeige alle user an</li>
-    <li>Kreiere einen User</li>
-    <li>Lösche einen User</li>
-</ol> -->
-
 
 <div class="container">
     <div class="row justify-content-center">
