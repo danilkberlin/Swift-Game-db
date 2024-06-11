@@ -1,6 +1,15 @@
-addDefaultCharset utf-8
+AddDefaultCharset utf-8
 
 RewriteEngine On
+
+# Do not apply the rewrite rules to specific file types
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|woff|woff2|ttf|svg)$ [NC]
+
+# If the request is not a file
 RewriteCond %{REQUEST_FILENAME} !-f
+
+# If the request is not a directory
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php
+
+# Redirect everything else to index.php
+RewriteRule ^(.*)$ index.php [L]
