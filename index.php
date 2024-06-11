@@ -13,7 +13,6 @@
     //echo 'Hallo is\'s index.php';
 
     
-
     $router = new Router;
     $db = new Db;
     $router->run();

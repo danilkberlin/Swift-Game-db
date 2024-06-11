@@ -67,5 +67,9 @@ return [
     'user/register' => [
         'controller' => 'user',
         'action' => 'register'
-    ]
+    ],
+    'settings/profile' => [
+        'controller' => 'settings',
+        'action' => 'profile'
+    ],
 ];
