@@ -7,6 +7,7 @@
     <title><?php 
         echo $title; 
     ?></title>
+    <link rel="stylesheet" href="/style/index.css">
 </head>
 <body>
     <?php 
