@@ -4,7 +4,7 @@
             <h1 class='text-center'>Admin pages</h1>
         </div>
         <div class="col-4">
-            <a href="admin/delete">
+            <a href="admin/user">
                 <button class='btn btn-primary w-100'>Admit tabel</button>
             </a>
         </div>

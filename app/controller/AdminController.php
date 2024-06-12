@@ -9,19 +9,31 @@ class AdminController extends Controller {
         $this->view->render('Admin Login');
     }
 
-    public function deleteAction(){
+    public function userAction(){
         $result = $this->model->getUser();
         $vars = [
             'users' => $result,
         ];
+        $this->view->render('Admin table', $vars);
+    }
+
+    public function deleteAction(){
         if(isset($_POST['user_id'])) {
             $user_id = $_POST['user_id'];
             $delete = $this->model->deleteUser($user_id);
         }
-        $this->view->render('Admin User', $vars);
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            $referrer = $_SERVER['HTTP_REFERER'];
+            header("Location: $referrer");
+            exit; 
+        } else {
+            
+            header("Location: /");
+            exit;
+        }
     }
 
-    // userAction zeigt details zu user und du kannst ihn aendern geht auf admin/user/detail
+    // userDetailAction zeigt details zu user und du kannst ihn aendern geht auf admin/user/detail
 
     public function indexAction(){
 

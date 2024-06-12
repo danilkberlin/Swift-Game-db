@@ -11,7 +11,10 @@ return [
         'controller' => 'admin',
         'action' => 'login'   
     ],
-
+    'admin/user' => [
+        'controller' => 'admin',
+        'action' => 'user'   
+    ],
     'admin/delete' => [
         'controller' => 'admin',
         'action' => 'delete'   
