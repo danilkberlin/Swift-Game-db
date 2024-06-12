@@ -10,7 +10,7 @@ class AdminController extends Controller {
     }
 
     public function userAction(){
-        $result = $this->model->getUser();
+        $result = $this->model->getUsers();
         $vars = [
             'users' => $result,
         ];
@@ -20,7 +20,7 @@ class AdminController extends Controller {
     public function deleteAction(){
         if(isset($_POST['user_id'])) {
             $user_id = $_POST['user_id'];
-            $delete = $this->model->deleteUser($user_id);
+            $delete = $this->model->deleteUserById($user_id);
         }
         if (isset($_SERVER['HTTP_REFERER'])) {
             $referrer = $_SERVER['HTTP_REFERER'];
@@ -34,6 +34,18 @@ class AdminController extends Controller {
     }
 
     // userDetailAction zeigt details zu user und du kannst ihn aendern geht auf admin/user/detail
+
+    public function detailAction(){
+        if(isset($_POST['user_id'])){
+            $user_id = $_POST['user_id'];
+            $detail = $this->model->getUserById($user_id);
+            
+            $vars = [
+                'users' => $detail,
+            ];
+        }
+        $this->view->render('Detail user', $vars);
+    }
 
     public function indexAction(){
 

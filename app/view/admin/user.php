@@ -7,6 +7,7 @@
                     <th>Id</th>
                     <th>Login</th>
                     <th>Email</th>
+                    <th>Detail</th>
                     <th>Delete User</th>
                 </tr>
                 <?php foreach($users as $val): ?>
@@ -15,7 +16,13 @@
                         <td><?php echo $val['login']; ?></td>
                         <td><?php echo $val['email']; ?></td>
                         <td>
-                            <form method="post" action="/admin/delete"> 
+                            <form method="post" action="/admin/user/detail"> 
+                                <input type="hidden" name="user_id" value="<?php echo $val['id']; ?>">
+                                <button type="submit" class="btn btn-success">Detail</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" action="/admin/user/delete"> 
                                 <input type="hidden" name="user_id" value="<?php echo $val['id']; ?>">
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
