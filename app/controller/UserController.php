@@ -10,11 +10,11 @@ class UserController extends Controller {
 
         
     public function indexAction(){
-        $this->view->render('User');
+        $this->view->render('Log in');
     }
 
     public function registerAction(){
-        $this->view->render('Register');
+        $this->view->render('Sign up');
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $login = $_POST['login'];
