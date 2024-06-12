@@ -8,6 +8,7 @@ use PDO;
 
 class UserController extends Controller {
 
+
         
     public function indexAction(){
         $this->view->render('Log in');

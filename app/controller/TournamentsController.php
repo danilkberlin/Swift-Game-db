@@ -6,11 +6,11 @@ use app\core\Controller;
 class TournamentsController extends Controller {
 
     public function showAction(){
-        $this->view->render('Tournaments');
+        $this->view->render('Tournaments show');
     }
 
     public function listAction(){
-        $this->view->render('Tournaments List');
+        $this->view->render('Tournaments');
     }
 
     public function liveAction(){

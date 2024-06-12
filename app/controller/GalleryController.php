@@ -6,10 +6,10 @@ use app\core\Controller;
 class GalleryController extends Controller {
 
     public function showAction(){
-        $this->view->render('Gallery');
+        $this->view->render('Gallery show');
     }
 
     public function listAction(){
-        $this->view->render('Gallery Host');
+        $this->view->render('Gallery');
     }
 }

@@ -10,7 +10,6 @@ class Router
 
  
     public function __construct() {
-        //echo '<br>' . 'I am class Router.php';
         $arr = require 'app/config/routes.php';
         foreach ($arr as $key => $val) {
             $this->add($key, $val);

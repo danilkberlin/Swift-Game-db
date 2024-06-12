@@ -15,7 +15,7 @@
                         <td><?php echo $val['login']; ?></td>
                         <td><?php echo $val['email']; ?></td>
                         <td>
-                            <form method="post" action="/admin/user"> 
+                            <form method="post" action="/admin/delete"> 
                                 <input type="hidden" name="user_id" value="<?php echo $val['id']; ?>">
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>

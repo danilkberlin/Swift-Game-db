@@ -20,7 +20,7 @@ class View{
         ob_start();
         require 'app/view/'.$this->path.'.php';
         $content = ob_get_clean();
-
+        
         require 'app/view/layouts/'.$this->layout.'.php';
     }
 }
