@@ -15,20 +15,20 @@
                         <a class="nav-link rounded-2 px-4" href="#">About</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">Tournaments</a>
+                        <a class="nav-link rounded-2 px-4" href="tournaments">Tournaments</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">Gallery</a>
+                        <a class="nav-link rounded-2 px-4" href="gallery">Gallery</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">News</a>
+                        <a class="nav-link rounded-2 px-4" href="new">News</a>
                     </li>
                     <li class="nav-item m-2">
                         <a class="nav-link rounded-2 px-4" href="#">Contacts</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="user/user">
+                    <a href="user/login">
                         <button class="btn btn-outline-success w-100 px-5">Login</button>
                     </a>
                 </div>
