@@ -11,11 +11,15 @@ return [
         'controller' => 'admin',
         'action' => 'login'   
     ],
+    'admin/user/detail' => [
+        'controller' => 'admin',
+        'action' => 'detail'   
+    ],
     'admin/user' => [
         'controller' => 'admin',
         'action' => 'user'   
     ],
-    'admin/delete' => [
+    'admin/user/delete' => [
         'controller' => 'admin',
         'action' => 'delete'   
     ],
