@@ -12,9 +12,13 @@ return [
         'action' => 'login'   
     ],
 
-    'admin/user' => [
+    'admin/delete' => [
         'controller' => 'admin',
-        'action' => 'user'   
+        'action' => 'delete'   
+    ],
+    'admin' =>[
+        'controller' => 'admin',
+        'action' => 'index'
     ],
     //Account 
     'account/login' => [
@@ -32,7 +36,7 @@ return [
         'action' => 'show'   
     ],
 
-    'new/list' => [
+    'new' => [
         'controller' => 'new',
         'action' => 'list'   
     ],
@@ -42,7 +46,7 @@ return [
         'action' => 'show'   
     ],
 
-    'gallery/list' => [
+    'gallery' => [
         'controller' => 'gallery',
         'action' => 'list'   
     ],
@@ -52,7 +56,7 @@ return [
         'action' => 'show'   
     ],
 
-    'tournaments/list' => [
+    'tournaments' => [
         'controller' => 'tournaments',
         'action' => 'list'   
     ],
@@ -60,7 +64,7 @@ return [
         'controller' => 'tournaments',
         'action' => 'live'   
     ],
-    'user/user' => [
+    'user/login' => [
         'controller' => 'user',
         'action' => 'index'
     ],
