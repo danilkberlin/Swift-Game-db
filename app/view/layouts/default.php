@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="/style/index.css">
 </head>
 <body>
+    <?php
+        $current_page = trim($_SERVER['REQUEST_URI'], '/');
+        if($current_page == '' || $current_page == 'tournaments' || $current_page == 'gallery' || $current_page == 'new'){
+            include('navbar.php');
+        }
+    ?>
     <?php 
         echo $content; 
     ?>

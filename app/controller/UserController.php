@@ -36,7 +36,7 @@ class UserController extends Controller {
                 $result->bindParam(':email', $email, PDO::PARAM_STR);
                 $result->execute();
                 
-                echo 'Are you registered!';
+                //echo 'Are you registered!';
             } catch (PDOException $e) {
                 echo 'Database error: ' . $e->getMessage();
             }
