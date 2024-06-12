@@ -6,10 +6,10 @@ use app\core\Controller;
 class AdminController extends Controller {
 
     public function loginAction(){
-        $this->view->render('Adnim Login');
+        $this->view->render('Admin Login');
     }
 
-    public function userAction(){
+    public function deleteAction(){
         $result = $this->model->getUser();
         $vars = [
             'users' => $result,
@@ -18,6 +18,14 @@ class AdminController extends Controller {
             $user_id = $_POST['user_id'];
             $delete = $this->model->deleteUser($user_id);
         }
-        $this->view->render('Adnim User', $vars);
+        $this->view->render('Admin User', $vars);
+    }
+
+    // userAction zeigt details zu user und du kannst ihn aendern geht auf admin/user/detail
+
+    public function indexAction(){
+
+        $this->view->render('Admin');
     }
 }
+
