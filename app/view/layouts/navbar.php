@@ -8,10 +8,10 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarDrop">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">Home</a>
+                        <a class="nav-link rounded-2 px-4" href="/">Home</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">About</a>
+                        <a class="nav-link rounded-2 px-4" href="/">About</a>
                     </li>
                     <li class="nav-item m-2">
                         <a class="nav-link rounded-2 px-4" href="tournaments">Tournaments</a>
@@ -23,7 +23,7 @@
                         <a class="nav-link rounded-2 px-4" href="new">News</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link rounded-2 px-4" href="#">Contacts</a>
+                        <a class="nav-link rounded-2 px-4" href="/">Contacts</a>
                     </li>
                 </ul>
                 <div class="d-flex">

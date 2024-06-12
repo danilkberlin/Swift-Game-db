@@ -12,6 +12,27 @@ class UserController extends Controller {
         
     public function indexAction(){
         $this->view->render('Log in');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $login = $_POST['login'];
+            $password = $_POST['password'];
+    
+            try {
+                $db = new Db();
+                $sql  = "SELECT * FROM `users` WHERE login = :login AND password = :password";
+                $result = $db->getConnection()->prepare($sql);
+                $result->bindParam(':login', $login, PDO::PARAM_STR);
+                $result->bindParam(':password', $password, PDO::PARAM_STR);
+                $result->execute();
+    
+                if ($result->rowCount() > 0) {
+                    echo "<script>alert('Hi $login!');</script>";
+                } else {
+                    echo "<script>alert('Invalid login or password.');</script>";
+                }
+            } catch (PDOException $e) {
+                echo 'Database error: ' . $e->getMessage();
+            }
+        }
     }
 
     public function registerAction(){

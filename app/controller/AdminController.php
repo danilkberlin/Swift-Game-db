@@ -33,7 +33,7 @@ class AdminController extends Controller {
         }
     }
 
-    // userDetailAction zeigt details zu user und du kannst ihn aendern geht auf admin/user/detail
+
 
     public function detailAction(){
         if(isset($_POST['user_id'])){

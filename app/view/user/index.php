@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10 border rounded-2 py-5">
                 <h1 class='text-center'>Log in</h1>
-                <form action="/user/register" method="post">        
+                <form action="/user/login" method="post">        
                     <label for='login'>Your Login</label>
                     <input name='login' class="form-control w-100 mb-3" type='login' id="login">
     
