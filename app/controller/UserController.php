@@ -35,7 +35,7 @@ class UserController extends Controller {
 
                     
                     setcookie('PHPSESSID', session_id(), time() + 3600, '/');
-
+                    
                     header("Location: /");
                     exit;
                 } else {
