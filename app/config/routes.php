@@ -79,6 +79,11 @@ return [
         'controller' => 'user',
         'action' => 'register'
     ],
+    'user/signout' => [
+        'controller' => 'user',
+        'action' => 'signout'
+    ],
+    //Settings
     'settings/profile' => [
         'controller' => 'settings',
         'action' => 'profile'

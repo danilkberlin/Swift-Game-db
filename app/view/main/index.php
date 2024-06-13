@@ -52,7 +52,7 @@
             </li>
             <hr>
             <li class="nav-item m-2">
-                <a class="nav-link rounded-2 px-4" href="user/signout">Sing out</a>
+                <a class="nav-link rounded-2 px-4" href="/user/signout">Sing out</a>
             </li>
         </ul>
     </div>

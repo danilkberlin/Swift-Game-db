@@ -48,6 +48,13 @@ class UserController extends Controller {
         ob_end_flush();
     }
 
+    public function signoutAction(){
+        setcookie('PHPSESSID', '', time() - 3600, '/');
+        session_destroy();
+        header("Location: /");
+        exit;
+    }
+
     public function registerAction(){
         $this->view->render('Sign up');
 
