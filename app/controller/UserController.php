@@ -11,7 +11,11 @@ class UserController extends Controller {
 
         
     public function indexAction(){
+        ob_start();
+
         $this->view->render('Log in');
+
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $login = $_POST['login'];
             $password = $_POST['password'];
@@ -25,7 +29,15 @@ class UserController extends Controller {
                 $result->execute();
     
                 if ($result->rowCount() > 0) {
-                    echo "<script>alert('Hi $login!');</script>";
+                    
+                    session_start();
+                    $_SESSION['user'] = $login;
+
+                    
+                    setcookie('PHPSESSID', session_id(), time() + 3600, '/');
+
+                    header("Location: /");
+                    exit;
                 } else {
                     echo "<script>alert('Invalid login or password.');</script>";
                 }
@@ -33,6 +45,7 @@ class UserController extends Controller {
                 echo 'Database error: ' . $e->getMessage();
             }
         }
+        ob_end_flush();
     }
 
     public function registerAction(){
