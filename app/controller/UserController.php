@@ -63,18 +63,21 @@ class UserController extends Controller {
             $password = $_POST['password'];
             $repeatpassword = $_POST['repeatpassword'];
             $email = $_POST['email'];
-        
+            $regist_date = date('Y-m-d H:i:s');
+            
+
             if ($password !== $repeatpassword) {
                 die('Passwords do not match!');
             }
         
             try {
                 $db = new Db();
-                $sql  = "INSERT INTO `users` (login, password, email) VALUES (:login, :password, :email)";
+                $sql  = "INSERT INTO `users` (login, password, email, regist_date) VALUES (:login, :password, :email, :regist_date)";   
                 $result = $db->getConnection()->prepare($sql);
                 $result->bindParam(':login', $login, PDO::PARAM_STR);
                 $result->bindParam(':password', $password, PDO::PARAM_STR);
                 $result->bindParam(':email', $email, PDO::PARAM_STR);
+                $result->bindParam(':regist_date', $regist_date, PDO::PARAM_STR);
                 $result->execute();
                 
                 //echo 'Are you registered!';
