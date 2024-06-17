@@ -19,6 +19,7 @@ class UserController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $login = $_POST['login'];
             $password = $_POST['password'];
+
     
             try {
                 $db = new Db();
@@ -29,9 +30,17 @@ class UserController extends Controller {
                 $result->execute();
     
                 if ($result->rowCount() > 0) {
-                    
+                    $user = $result->fetch(PDO::FETCH_ASSOC);
+
                     session_start();
-                    $_SESSION['user'] = $login;
+                    // Get the user information
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_name'] = $user['user_name'];
+                    $_SESSION['user'] = $user['login'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['bio'] = $user['bio'];
+                    $_SESSION['pronouns'] = $user['pronouns'];
+
 
                     
                     setcookie('PHPSESSID', session_id(), time() + 3600, '/');
