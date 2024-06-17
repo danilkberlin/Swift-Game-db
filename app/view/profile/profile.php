@@ -5,7 +5,7 @@
                 <div class="row justify-content-center">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item m-2">
-                            <a class="nav-link rounded-2 px-4" href="#">
+                            <a class="nav-link rounded-2 px-4" href="#profile">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                                 </svg>
@@ -13,7 +13,7 @@
                             </a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link rounded-2 px-4" href="#">
+                            <a class="nav-link rounded-2 px-4" href="#change-profile">
                                 <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 452.025 452.025" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> 
                                     <path d="M362.612,34.125h-55.2l13.6-13.6c4.7-4.7,4.7-12.3,0-17s-12.3-4.7-17,0l-34,34.1c-2.3,2.3-3.5,5.3-3.5,8.5 s1.3,6.2,3.5,8.5l34.1,34.1c2.3,2.3,5.4,3.5,8.5,3.5s6.1-1.2,8.5-3.5c4.7-4.7,4.7-12.3,0-17l-13.6-13.6h55.2c35.9,0,65,29.2,65,65 v40.3c0,6.6,5.4,12,12,12s12-5.4,12-12v-40.3C451.712,74.025,411.712,34.125,362.612,34.125z"></path> 
                                     <path d="M438.812,230.925h-197.1c-6.6,0-12,5.4-12,12v197.1c0,6.6,5.4,12,12,12h197.1c6.6,0,12-5.4,12-12v-197.1 C450.812,236.225,445.412,230.925,438.812,230.925z M426.812,428.025h-173.1v-173.1h173.1L426.812,428.025L426.812,428.025z"></path> 
@@ -57,22 +57,22 @@
                                     <form action="profile" method="post">
                                         <div class="row">
                                             <div class="col-12 my-2">
-                                                <label for='user_name'>Name</label>
+                                                <label for='user_name' class='form-label'>Name</label>
                                                 <input name='user_name' class="form-control w-100 mb-3" type='text' id="user_name" value="<?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : ''; ?>">
                                                 <p class='text-secondary'>Your name may appear around Swift Game where you contribute or are mentioned. You can remove it at any time.</p>
                                             </div>
                                             <div class="col-12 my-2">
-                                                <label for="email">Public email</label>
+                                                <label for="email" class='form-label'>Public email</label>
                                                 <input name="email" class="form-control w-100 mb-3" type="email" id="email" value="<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?>">
                                                 <p class="text-secondary">Your email may appear around Swift Game where you contribute or are mentioned.</p>
                                             </div>
                                             <div class="col-12 my-2">
-                                                <label for="bio">Bio</label>
+                                                <label for="bio" class='form-label'>Bio</label>
                                                 <textarea name="bio" class="form-control w-100 mb-3" id="bio" rows="3" <?php echo isset($_SESSION['bio']) ? $_SESSION['bio'] : ''; ?>></textarea>
                                                 <p class='text-secondary'>You can @mention other users and organizations to link to them.</p>
                                             </div>
                                             <div class="col-12 my-2">
-                                                <label for="pronouns">Pronouns</label>
+                                                <label for="pronouns" class='form-label'>Pronouns</label>
                                                 <select name="pronouns" id="pronouns" class="form-select">
                                                     <option value="">Don't specify</option>
                                                     <option value="they/them" <?php echo (isset($_SESSION['pronouns']) && $_SESSION['pronouns'] == 'they/them') ? 'selected' : ''; ?>>they/them</option>
@@ -104,6 +104,55 @@
                                     </form>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='my-5' id='change-profile'>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div class="row justify-content-start">
+                    <div class="col-12">
+                        <h2>Change Dateils</h2>
+                    </div>
+                    <hr>
+                    <div class="row d-flex justify-content-start">
+                        <div class="col-7">
+                            <div class="row d-flex justify-content-start">
+                                <div class="col-12">
+                                    <form action="profile/change" method="post">
+                                        <div class="col-12 my-4">
+                                            <label for='login'>Login</label>
+                                            <input name='login' class="form-control w-100 mb-3" type='text' id="login">
+                                            <p class='text-secondary'>If you wish, you can change your email address for your convenience.</p>
+                                        </div>
+                                        <hr>
+                                        <div class="col-12 my-4">
+                                            <label for='password'>Password</label>
+                                            <input name='password' class="form-control w-100 mb-3" type='password' id="password">
+                                            <p class='text-secondary'>If you wish, you can change your password address for your convenience.</p>
+                                        </div>
+                                        <div class="col-12 my-4">
+                                            <label for='repeatpassword'>Repeat Password</label>
+                                            <input name='repeatpassword' class="form-control w-100 mb-3" type='password' id="repeatpassword">
+                                        </div>
+                                        <hr>
+                                        <div class="col-12 my-2">
+                                            <label for="email" class='form-label'>Change email</label>
+                                            <input name="email" class="form-control w-100 mb-3" type="email" id="email">
+                                            <p class="text-secondary">Your email may appear around Swift Game where you contribute or are mentioned.</p>
+                                        </div>
+                                        <div class="col-lg-4 col-md-8 col-sm-12  my-4">
+                                            <button class='btn btn-success'>Change Dateils</button>
+                                        </div>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5"></div>
                     </div>
                 </div>
             </div>

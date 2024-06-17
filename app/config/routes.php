@@ -91,5 +91,9 @@ return [
     'profile' => [
         'controller' => 'profile',
         'action' => 'profile'
+    ],
+    'profile/change' => [
+        'controller' => 'profile',
+        'action' => 'change'
     ]
 ];
