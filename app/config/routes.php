@@ -88,4 +88,8 @@ return [
         'controller' => 'settings',
         'action' => 'profile'
     ],
+    'profile' => [
+        'controller' => 'profile',
+        'action' => 'profile'
+    ]
 ];
