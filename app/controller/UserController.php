@@ -56,8 +56,10 @@ class UserController extends Controller {
     }
 
     public function registerAction(){
+        ob_start(); 
+    
         $this->view->render('Sign up');
-
+    
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $login = $_POST['login'];
             $password = $_POST['password'];
@@ -65,7 +67,14 @@ class UserController extends Controller {
             $email = $_POST['email'];
             $regist_date = date('Y-m-d H:i:s');
             
-
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                die('Email is not valid!');
+            }
+    
+            if(strlen($login) < 3 || strlen($login) > 30) {
+                die('Login must be between 3 and 30 characters!');
+            }
+    
             if ($password !== $repeatpassword) {
                 die('Passwords do not match!');
             }
@@ -78,14 +87,18 @@ class UserController extends Controller {
                 $result->bindParam(':password', $password, PDO::PARAM_STR);
                 $result->bindParam(':email', $email, PDO::PARAM_STR);
                 $result->bindParam(':regist_date', $regist_date, PDO::PARAM_STR);
+                
                 $result->execute();
                 
-                //echo 'Are you registered!';
+
+                header("Location: /user/login");
+                exit(); 
             } catch (PDOException $e) {
                 echo 'Database error: ' . $e->getMessage();
             }
         }
     }
+    
 
 }
 
