@@ -90,7 +90,7 @@ class UserController extends Controller {
         
             try {
                 $db = new Db();
-                $sql  = "INSERT INTO `users` (login, password, email, regist_date) VALUES (:login, :password, :email, :regist_date)";   
+                $sql  = "INSERT INTO `users` (login, password, email, regist_date) VALUES (:login, :password, :email, :regist_date)"; 
                 $result = $db->getConnection()->prepare($sql);
                 $result->bindParam(':login', $login, PDO::PARAM_STR);
                 $result->bindParam(':password', $password, PDO::PARAM_STR);

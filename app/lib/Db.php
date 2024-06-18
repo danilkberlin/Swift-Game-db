@@ -28,7 +28,7 @@ class Db {
     }
 
     public function insertEmail($email){
-       $result = $this->db->prepare('INSERT INTO user (email) VALUES (:email)');
+       $result = $this->db->prepare('INSERT INTO users (email) VALUES (:email)');
        $result->bindParam(':email', $email, PDO::PARAM_STR);
        return $result->execute();
     }
