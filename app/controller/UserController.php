@@ -40,6 +40,7 @@ class UserController extends Controller {
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['bio'] = $user['bio'];
                     $_SESSION['pronouns'] = $user['pronouns'];
+                    $_SESSION['icon_foto'] = $user['icon_foto'];
 
 
                     

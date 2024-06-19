@@ -99,5 +99,9 @@ return [
     'profile/change' => [
         'controller' => 'profile',
         'action' => 'change'
-    ]
+    ],
+    'profile/foto' => [
+        'controller' => 'profile',
+        'action' => 'foto'
+    ],
 ];

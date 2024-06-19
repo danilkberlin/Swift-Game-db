@@ -29,4 +29,23 @@ class Profile extends Model {
         $result->execute();
         return $result->rowCount();
     }
+
+    public function updateUserFoto($user_id, $icon_foto){
+        $db = $this->db->getConnection();
+        $sql = "UPDATE users SET icon_foto = :icon_foto WHERE id = :id";
+        $result = $this->db->prepare($sql);
+        $result->bindParam(':icon_foto', $icon_foto, PDO::PARAM_STR);
+        $result->bindParam(':id', $user_id, PDO::PARAM_INT);
+        $result->execute();
+        return $result->rowCount();
+    }
+
+    public function getIconFotoByUserId($user_id){
+        $db = $this->db->getConnection();
+        $sql = "SELECT icon_foto FROM users WHERE id = :id";
+        $result = $this->db->prepare($sql);
+        $result->bindParam(':id', $user_id, PDO::PARAM_INT);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
 }

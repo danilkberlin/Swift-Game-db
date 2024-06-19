@@ -7,7 +7,6 @@ class ProfileController extends Controller {
 
     public function profileAction() {
         ob_start();
-        $this->view->render('Your profile');
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $name = htmlspecialchars($_POST['user_name']);
@@ -25,6 +24,15 @@ class ProfileController extends Controller {
             }
             ob_end_clean();
         }
+        $user_foto = $this->model->getIconFotoByUserId($_SESSION['user_id']);
+
+        
+        $vars = [
+            'user_foto' => $user_foto,
+        ];
+
+        
+        $this->view->render('Your profile', $vars);
     }
 
     public function changeAction() {
@@ -44,6 +52,25 @@ class ProfileController extends Controller {
                 echo "Error updating profile.";
             }
             ob_end_clean();	
+        }
+    }
+
+    public function fotoAction() {
+        ob_start();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $icon_foto = htmlspecialchars($_POST['iconFoto']);
+            $user_id = $_SESSION['user_id'];
+            $result = $this->model->updateUserFoto($user_id, $icon_foto); 
+
+            if (isset($_SERVER['HTTP_REFERER'])) {
+                $referrer = $_SERVER['HTTP_REFERER'];
+                header("Location: $referrer");
+                exit; 
+            } else {
+                
+                header("Location: /");
+                exit;
+            }
         }
     }
 }
