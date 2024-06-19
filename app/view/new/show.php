@@ -67,7 +67,7 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="photoUpload" class="form-label">Upload image</label>
-                                                <input type="text" class="form-control" id="photoUpload" name="photoUpload" placeholder="Your link">
+                                                <input type="url" class="form-control" id="photoUpload" name="photoUpload" placeholder="Your link">
                                             </div>
                                             <div class="row justify-content-center">
                                                 <div class="col-lg-6 col-md-9 col-sm-12">

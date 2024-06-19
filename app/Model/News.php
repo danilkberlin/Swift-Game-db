@@ -22,4 +22,12 @@ class News extends Model {
             return false;
         }
     }
+
+    public function getNews() {
+        $sql = 'SELECT news.url_foto, news.text, news.headline, news.date_post, users.login 
+                FROM news 
+                JOIN users ON news.fk_user = users.id';
+        $result = $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }

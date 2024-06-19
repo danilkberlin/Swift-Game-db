@@ -20,6 +20,11 @@ class NewController extends Controller {
             $text = htmlspecialchars($_POST['newsText']);
             $date_post = date('Y-m-d H:i:s');
             $url_foto = htmlspecialchars($_POST['photoUpload']);
+
+            if($headline == "" || $text == "" || $url_foto == ""){
+                echo "<script>alert(Please fill in all fields.)</script>";
+                exit;
+            }
             
             $this->model = new News();
             $result = $this->model->addNews($fk_user, $url_foto, $text, $headline, $date_post);
@@ -35,6 +40,11 @@ class NewController extends Controller {
     }
 
     public function listAction(){
-        $this->view->render('News');
+        $this->model = new News();
+        $result = $this->model->getNews();
+        $vars = [
+            'news' => $result,
+        ];
+        $this->view->render('News', $vars);
     }
 }
