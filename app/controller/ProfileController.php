@@ -15,7 +15,6 @@ class ProfileController extends Controller {
             $bio = htmlspecialchars($_POST['bio']);
             $pronouns = htmlspecialchars($_POST['pronouns']);
 
-            $user_id = $_SESSION['user_id']; 
             $result = $this->model->updateUserInformation($user_id, $name, $email, $bio, $pronouns);
 
             if ($result) {

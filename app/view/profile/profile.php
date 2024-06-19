@@ -1,6 +1,6 @@
 <section class='profile my-5'>
     <div class="container">
-        <div class="row d-flex justify-content-end">
+        <div class="row d-flex justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="row justify-content-center">
                     <ul class="navbar-nav mx-auto">

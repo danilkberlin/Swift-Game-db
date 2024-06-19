@@ -41,4 +41,5 @@ class Db {
         return $this->db->prepare($sql);
     }
 
+
 }

@@ -9,11 +9,12 @@
             echo $title; 
         ?>
     </title>
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
 </head>
 <body>
     <?php
         $current_page = trim($_SERVER['REQUEST_URI'], '/');
-        if($current_page == '' || $current_page == 'tournaments' || $current_page == 'gallery' || $current_page == 'new'){
+        if($current_page == '' || $current_page == 'tournaments' || $current_page == 'gallery' || $current_page == 'new' || $current_page == 'new/show'){
             include('navbar.php');
         }
     ?>
