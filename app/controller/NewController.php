@@ -47,4 +47,20 @@ class NewController extends Controller {
         ];
         $this->view->render('News', $vars);
     }
+
+    public function deleteAction(){
+        if(isset($_POST['post_id'])){
+            $post_id = $_POST['post_id'];
+            $this->model = new News();
+            $delete = $this->model->deleteNewsById($post_id);
+        }
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            $referrer = $_SERVER['HTTP_REFERER'];
+            header("Location: $referrer");
+            exit; 
+        } else {
+            header("Location: /");
+            exit;
+        }
+    }
 }

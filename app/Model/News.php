@@ -24,10 +24,14 @@ class News extends Model {
     }
 
     public function getNews() {
-        $sql = 'SELECT news.url_foto, news.text, news.headline, news.date_post, users.login 
-                FROM news 
-                JOIN users ON news.fk_user = users.id';
+        $sql = 'SELECT * FROM news
+        JOIN users ON news.fk_user = users.id';
         $result = $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function deleteNewsById($post_id){
+        $result = $this->db->query("DELETE FROM news WHERE post_id = $post_id");
         return $result;
     }
 }

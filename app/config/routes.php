@@ -47,6 +47,10 @@ return [
         'controller' => 'new',
         'action' => 'list'   
     ],
+    'new/delete' =>[
+        'controller' => 'new',
+        'action' => 'delete'  
+    ],
     //gallery
     'gallery/show' => [
         'controller' => 'gallery',
