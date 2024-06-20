@@ -10,6 +10,12 @@ class GalleryController extends Controller {
     }
 
     public function listAction(){
-        $this->view->render('Gallery');
+        $result = $this->model->getGallery();
+        $vars = [
+            'gallery' => $result,
+        ];
+
+
+        $this->view->render('Gallery', $vars);
     }
 }
