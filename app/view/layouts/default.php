@@ -10,6 +10,28 @@
         ?>
     </title>
     <link rel="stylesheet" type="text/css" href="/style/index.css">
+    <style>
+        .carousel-indicators img {
+            border: 2px solid #fff;
+            margin: 0 5px;
+            opacity: 0.7;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .carousel-indicators img:hover,
+        .carousel-indicators img.active {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .carousel-item img {
+            height: 1000px; 
+            object-fit: cover; 
+        }
+    </style>
 </head>
 <body>
     <?php
