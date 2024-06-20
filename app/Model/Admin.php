@@ -19,4 +19,9 @@ class Admin extends Model{
         $result = $this->db->query("SELECT * FROM users WHERE id = $user_id");
         return $result;
     }
+
+    public function addGallery($foto){
+        $result = $this->db->query("INSERT INTO gallery (foto) VALUES ('$foto')");
+        return $result;
+    }
 }

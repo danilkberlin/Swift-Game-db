@@ -5,8 +5,21 @@ use app\core\Controller;
 
 class AdminController extends Controller {
 
-    public function loginAction(){
-        $this->view->render('Admin Login');
+    public function galleryAction(){
+        ob_start();
+        $this->view->render('Gallery');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $foto = htmlspecialchars($_POST['gallery_foto']);
+            $result = $this->model->addGallery($foto);
+
+            if ($result) {
+                header("Location: /admin/gallery");
+                exit;
+            }else {
+                echo "Error adding news.";
+            }
+        }
     }
 
     public function userAction(){

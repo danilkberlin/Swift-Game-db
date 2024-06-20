@@ -9,8 +9,8 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="admin/login">
-                <button class='btn btn-primary w-100'>Analytical tabel</button>
+            <a href="admin/gallery">
+                <button class='btn btn-primary w-100'>Gallery</button>
             </a>
         </div>
     </div>
