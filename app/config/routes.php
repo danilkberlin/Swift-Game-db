@@ -7,9 +7,9 @@ return [
         'action' => 'index'   
     ],
     //Admin 
-    'admin/login' => [
+    'admin/gallery' => [
         'controller' => 'admin',
-        'action' => 'login'   
+        'action' => 'gallery'   
     ],
     'admin/user/detail' => [
         'controller' => 'admin',
