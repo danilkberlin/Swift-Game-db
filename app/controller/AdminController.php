@@ -4,6 +4,22 @@ namespace app\controller;
 use app\core\Controller;
 
 class AdminController extends Controller {
+    
+    public function tournamentsAction(){
+        $withoutAccount = $this->model->getAllUsersInTournaments();
+        $vars = [
+            'tournamentsWithoutAccount' => $withoutAccount,
+        ];
+        
+
+        $whisAccount = $this->model->getTournamentsByUserWhisAccount();
+        $varst = [
+            'tournament' => $whisAccount, 
+        ];
+        
+        $this->view->render('Tournaments', $vars, $varst);
+
+    }
 
     public function galleryAction(){
         ob_start();

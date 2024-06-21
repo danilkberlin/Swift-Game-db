@@ -4,6 +4,16 @@ namespace app\model;
 use app\core\Model;
 
 class Admin extends Model{
+    public function getTournamentsByUserWhisAccount(){
+        $sql = $this->db->row("SELECT * FROM tournaments 
+        JOIN users ON tournaments.fk_user = users.id");
+        return $sql;
+    }
+
+    public function getAllUsersInTournaments(){
+        $sql = $this->db->row("SELECT * FROM tournaments");
+        return $sql;
+    }
 
     public function getUsers(){
         $result = $this->db->row('SELECT id, login, email FROM users');

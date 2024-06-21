@@ -7,6 +7,10 @@ return [
         'action' => 'index'   
     ],
     //Admin 
+    'admin/tournaments' => [
+        'controller' => 'admin',
+        'action' =>'tournaments'
+    ],
     'admin/gallery' => [
         'controller' => 'admin',
         'action' => 'gallery'   
@@ -75,6 +79,11 @@ return [
         'controller' => 'tournaments',
         'action' => 'live'   
     ],
+    'tournaments/account' => [
+        'controller' => 'tournaments',
+        'action' => 'account'   
+    ],
+    //User
     'user/login' => [
         'controller' => 'user',
         'action' => 'index'
