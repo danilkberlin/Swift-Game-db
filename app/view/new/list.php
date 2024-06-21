@@ -138,7 +138,7 @@
                                                         Block
                                                     </a>
                                                 </li>
-                                                <?php if($val['login'] ==  $_SESSION['user']): ?>
+                                                <?php if($val['login'] ==  $_SESSION['user'] ||  $_SESSION['user_id'] === 42): ?>
                                                     <hr>
                                                     <li>
                                                         <form action="/new/delete" method="POST">

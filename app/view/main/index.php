@@ -19,23 +19,21 @@
         </div>
     </div>
 </section>
+<img src="https://i.pinimg.com/564x/b9/17/da/b917da5a7013d255447a7cd75f9643b6.jpg" class='w-100 z-n1 position-absolute' alt="">
 <section id='about' style='padding: 200px 0;'>
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-4">
+            <div class="col-ld-4 col-md-4 col-sm-12">
                 <img src="https://play-lh.googleusercontent.com/oP10zB23-NTsw7QLdA0pvVpAKwfGiVk3VpKF56hT9wZFr1x0_Bf6OH2tRWn4egOJcXpn" alt="logo" class="img-fluid">
             </div>
-            <div class="col-6">
+            <div class="col-ld-6 col-md-6 col-sm-12">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <h1 id='down'>About</h1>
                         <hr>
                     </div>
                     <div class="col-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div class="col-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class='fs-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -50,9 +48,9 @@
 <section id='about' style='padding: 100px 0;'>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <img src="https://montenegrojose.com/wp-content/uploads/2019/12/Prodigy-1.jpg" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 100px; height: 100px; cursor: pointer;">
-            <img src="https://www.artlebedev.com/1shot/interiors/1shot-interiors-red-room.jpg" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" style="width: 100px; height: 100px; cursor: pointer;">
-            <img src="https://www.artlebedev.com/1shot/interiors/1shot-interiors-gg-light.jpg" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" style="width: 100px; height: 100px; cursor: pointer;">
+            <img src="https://montenegrojose.com/wp-content/uploads/2019/12/Prodigy-1.jpg" data-bs-target="#carouselExampleDark" class='mx-3' data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 100px; height: 100px; cursor: pointer;">
+            <img src="https://www.artlebedev.com/1shot/interiors/1shot-interiors-red-room.jpg" data-bs-target="#carouselExampleDark" class='mx-3' data-bs-slide-to="1" aria-label="Slide 2" style="width: 100px; height: 100px; cursor: pointer;">
+            <img src="https://www.artlebedev.com/1shot/interiors/1shot-interiors-gg-light.jpg" data-bs-target="#carouselExampleDark" class='mx-3' data-bs-slide-to="2" aria-label="Slide 3" style="width: 100px; height: 100px; cursor: pointer;">
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">

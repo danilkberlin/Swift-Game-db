@@ -10,7 +10,7 @@
                 </div>
                 <div class="row justify-content-between">
                     <?php foreach ($gallery as $item):?>
-                        <div class="col-4 d-flex">
+                        <div class="col-lg-4 col-md-6 col-sm-12 d-flex">
                             <div class="card my-2">
                                 <img class="card-img-center w-100" src="<?=$item['foto']?>" style="width: 460px; height: 311px">    
                             </div>
