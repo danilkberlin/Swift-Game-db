@@ -39,7 +39,5 @@ class Db {
 
     public function prepare($sql){
         return $this->db->prepare($sql);
-    }
-
-
+    }    
 }

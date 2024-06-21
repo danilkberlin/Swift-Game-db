@@ -40,8 +40,63 @@
                         <hr>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    
+                <div class="row justify-content-evenly align-items-center">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Registration Form</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        <form action="tournaments" method="POST" enctype="multipart/form-data">
+                                            <div class="row justify-content-center">
+                                                <div class="col mb-3">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name" name="name" required>
+                                                </div>
+                                                <div class="col mb-3">
+                                                    <label for="telephone" class="form-label">Number</label>
+                                                    <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                                                </div>
+                                            </div>
+                                            <div class="my-3">
+                                                <label for="email" class="form-label">Gmail</label>
+                                                <input type="text" class="form-control" id="email" name="email" required>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-6 col-md-8 col-sm-10">
+                                                    <button type="submit" class="btn btn-primary w-100">Apply now</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 py-5 border-start border-end">
+                        <h6 class='text-center'>OR</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="my-2">
+                            <button class='btn btn-outline-dark w-100'>
+                                Sign up using your account
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                    </svg>
+                            </button>
+                        </div>
+                        <div class="my-2">
+                            <button class='btn btn-outline-success w-100'>
+                                Sign up using your Google
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                        <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
