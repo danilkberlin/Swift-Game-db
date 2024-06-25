@@ -1,22 +1,24 @@
 <nav id="NavBar" class="navbar navbar-expand-lg navbar-light rounded" aria-label="Twelfth navbar example">
     <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        </a>
         <?php
             if (isset($_COOKIE['PHPSESSID'])) {
                 echo '
                 <a class="rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                 ';
-                
-                if (isset($_SESSION["icon_foto"]) && $_SESSION["icon_foto"] !== NULL) {
+                    
+                    if (isset($_SESSION["icon_foto"]) && $_SESSION["icon_foto"] !== NULL) {
+                        echo '
+                        <img src="' . $_SESSION["icon_foto"] . '" class="rounded-circle" style="width: 64px; height: 64px" alt="...">
+                        ';
+                    } else {
+                        echo '
+                        <img src="https://cdn.create.vista.com/api/media/small/454471360/stock-vector-people-icon-vector-person-icon-vector-user-icon-vector" class="rounded-circle" style="width: 64px; height: 64px" alt="...">
+                        ';
+                    }
+                    
                     echo '
-                    <img src="' . $_SESSION["icon_foto"] . '" class="rounded-circle" style="width: 64px; height: 64px" alt="...">
-                    ';
-                } else {
-                    echo '
-                    <img src="https://cdn.create.vista.com/api/media/small/454471360/stock-vector-people-icon-vector-person-icon-vector-user-icon-vector" class="rounded-circle" style="width: 64px; height: 64px" alt="...">
-                    ';
-                }
-                
-                echo '
                 </a>
                 ';
             }
