@@ -4,7 +4,7 @@
             <div class="col-lg-2 col-md-6 col-sm-12">
                 <div class="row justify-content-center">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 nav-list-item rounded-2">
                             <a class="nav-link rounded-2 px-4" href="/new">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
@@ -13,7 +13,7 @@
                                 Registration
                             </a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 nav-list-item rounded-2">
                             <a class="nav-link rounded-2 px-4" href="#profile">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
                                   <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/>
@@ -21,7 +21,7 @@
                                 Live
                             </a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 nav-list-item rounded-2">
                             <a class="nav-link rounded-2 px-4" href="/new/show">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2" viewBox="0 0 16 16">
                                     <path d="M3.5 2a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-12a.5.5 0 0 0-.5-.5H12a.5.5 0 0 1 0-1h.5A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1H4a.5.5 0 0 1 0 1z"/>
@@ -36,52 +36,46 @@
             <div class="col-lg-10 col-md-6 col-sm-12">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Registration for the tournament</h2>
-                        <hr>
+                        <h2 class='text-color'>Registration for the tournament</h2>
+                        <hr class='text-color'>
                     </div>
                 </div>
                 <div class="row justify-content-evenly align-items-center">
                     <div class="col-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h2>Registration Form</h2>
-                            </div>
-                            <div class="card-body">
-                                <div class="row justify-content-center">
-                                    <div class="col-10">
-                                        <form action="tournaments" method="POST" enctype="multipart/form-data">
-                                            <div class="row justify-content-center">
-                                                <div class="col mb-3">
-                                                    <label for="name" class="form-label">Name</label>
-                                                    <input type="text" class="form-control" id="name" name="name" required>
-                                                </div>
-                                                <div class="col mb-3">
-                                                    <label for="telephone" class="form-label">Number</label>
-                                                    <input type="tel" class="form-control" id="telephone" name="telephone" required>
-                                                </div>
-                                            </div>
-                                            <div class="my-3">
-                                                <label for="email" class="form-label">Gmail</label>
-                                                <input type="text" class="form-control" id="email" name="email" required>
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-6 col-md-8 col-sm-10">
-                                                    <button type="submit" class="btn btn-primary w-100">Apply now</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                        <h2 class='title-text-gradient fs-2 text-center'>Registration Form</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <form action="tournaments" method="POST" enctype="multipart/form-data">
+                                    <div class="row justify-content-center">
+                                        <div class="col mb-3">
+                                            <label for="name" class="form-label text-color">Name</label>
+                                            <input type="text" class="form-control input-background" id="name" name="name" required>
+                                        </div>
+                                        <div class="col mb-3">
+                                            <label for="telephone" class="form-label text-color">Number</label>
+                                            <input type="tel" class="form-control input-background" id="telephone" name="telephone" required>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="my-3">
+                                        <label for="email" class="form-label text-color">Gmail</label>
+                                        <input type="text" class="form-control input-background" id="email" name="email" required>
+                                    </div>
+                                    <div class="row justify-content-center my-4">
+                                        <div class="col-lg-6 col-md-8 col-sm-10">
+                                            <button type="submit" class="btn btn-violet w-100">Apply now</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-2 py-5 border-start border-end">
-                        <h6 class='text-center'>OR</h6>
+                        <h6 class='text-center text-color'>OR</h6>
                     </div>
                     <div class="col-3">
                         <form action="/tournaments/account" method='post'>
                             <div class="my-2">
-                                <button class='btn btn-outline-dark w-100'>
+                                <button class='btn btn-outline-light w-100'>
                                     Sign up using your account
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>

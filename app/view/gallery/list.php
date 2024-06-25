@@ -4,8 +4,8 @@
             <div class="col-lg-10 col-md-6 col-sm-12">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2>Gallery</h2>
-                        <hr>
+                        <h2 class='title-text-gradient fs-1'>Gallery</h2>
+                        <hr class='text-color'>
                     </div>
                 </div>
                 <div class="row justify-content-between">
