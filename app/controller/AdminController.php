@@ -6,18 +6,16 @@ use app\core\Controller;
 class AdminController extends Controller {
     
     public function tournamentsAction(){
-        $withoutAccount = $this->model->getAllUsersInTournaments();
-        $vars = [
-            'tournamentsWithoutAccount' => $withoutAccount,
-        ];
-        
-
         $whisAccount = $this->model->getTournamentsByUserWhisAccount();
-        $varst = [
-            'tournament' => $whisAccount, 
+        $withoutAccount = $this->model->getAllUsersInTournaments();
+        
+        $mergedTournaments = array_merge($whisAccount, $withoutAccount);
+
+        $vars = [
+           'mergedTournaments' => $mergedTournaments,
         ];
         
-        $this->view->render('Tournaments', $vars, $varst);
+        $this->view->render('Tournaments', $vars);
 
     }
 

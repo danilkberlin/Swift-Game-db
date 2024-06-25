@@ -110,11 +110,22 @@
                                                 ';
                                             } else {
                                                 echo '
-                                                <img src="https://cdn.create.vista.com/api/media/small/454471360/stock-vector-people-icon-vector-person-icon-vector-user-icon-vector" class="rounded-circle" style="width: 92px; height: 92px" alt="...">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle mx-2" viewBox="0 0 16 16">
+                                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                                    </svg>
                                                 ';
                                             }
                                         ?>
-                                            <?php echo $val['login']?>
+                                        <?php 
+                                            if($val['id'] == 42){
+                                                echo $val['login'] .' '.  '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00ffff" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                              </svg>';
+                                            }else{
+                                                echo $val['login'];
+                                            }
+                                        ?>
                                         </h5>
                                         <div class="dropup-center dropup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" data-bs-toggle="dropdown" aria-expanded="false" class="bi bi-three-dots-vertical dropdown-toggle" viewBox="0 0 16 16">
