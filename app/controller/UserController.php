@@ -78,15 +78,15 @@ class UserController extends Controller {
             $regist_date = date('Y-m-d H:i:s');
             
             if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                die('Email is not valid!');
+                die('<script>alert("Invalid email format");</script>');
             }
     
             if(strlen($login) < 3 || strlen($login) > 30) {
-                die('Login must be between 3 and 30 characters!');
+                die('<script>alert("Login must be between 3 and 30 characters");</script>');
             }
     
             if ($password !== $repeatpassword) {
-                die('Passwords do not match!');
+                die('<script>alert("Passwords do not match");</script>');
             }
         
             try {
