@@ -97,10 +97,11 @@ return [
         'action' => 'signout'
     ],
     //Settings
-    'settings/profile' => [
+    'settings' => [
         'controller' => 'settings',
-        'action' => 'profile'
+        'action' => 'settings'
     ],
+    // Profile
     'profile' => [
         'controller' => 'profile',
         'action' => 'profile'
@@ -112,5 +113,18 @@ return [
     'profile/foto' => [
         'controller' => 'profile',
         'action' => 'foto'
+    ], 
+    //Seve
+    'save' => [
+        'controller' => 'save',
+        'action' => 'index'
+    ], 
+    'save/post' => [
+        'controller' =>'save',
+        'action' => 'post'
+    ],
+    'save/delete' => [
+        'controller' =>'save',
+        'action' => 'delete'
     ],
 ];

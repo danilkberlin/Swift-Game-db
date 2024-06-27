@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <?php include('style.php');?>
+    <?php 
+        
+        include('style.php');
+        
+    ?>
     <title>
-        <?php 
-            echo $title; 
-        ?>
+        <?php echo $title;?> 
     </title>
 </head>
 <body>
@@ -27,3 +29,14 @@
     <?php include('script.php');?>
 </body>
 </html>
+
+
+
+
+<!-- 
+    1 Практика 
+    2 Если понтавиться 
+        2.1 Учеба 
+        2.2 Работа 
+
+-->

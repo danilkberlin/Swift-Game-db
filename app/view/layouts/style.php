@@ -1,15 +1,25 @@
 <style>
+
     :root{
         --btn-color: #8A2BE2;
         --color: #fff;
         --fill-color: #fff;
         --btn-color-hover: #9400D3;
         --nav-border-color: #fff;
+        /* default background color */
+        --background-color-1: #1b1b1b;
+        --background-color-2: #fff;
+        /* title gradient */
+        -title-gradient-1: rgba(138,43,226,1);
+        -title-gradient-2: rgba(255,255,255,1);
     }
 
     body{
         background: #1b1b1b;
+        /* background: #fff; */
     }
+
+
 
     /* Default text  */
     .title-text-gradient{
@@ -76,6 +86,42 @@
         background:  var(--btn-color);
         color : var(--color);
     }
+
+    .btn-dark-white{
+        background: linear-gradient(90deg, #1b1b1b 50%, #fff 50%);
+    }
+    .btn-dark-red{
+        background: linear-gradient(90deg, #1b1b1b 50%, #ff0000 50%);
+    }
+    .btn-dark-green{
+        background: linear-gradient(90deg, #1b1b1b 50%, #00ff00 50%);
+    }
+    .btn-dark-blue{
+        background: linear-gradient(90deg, #1b1b1b 50%, #0000ff 50%);
+    }
+    .btn-dark-violet{
+        background: linear-gradient(90deg, #1b1b1b 50%, #8A2BE2 50%);
+    }
+
+    .btn-dark-yellow{
+        background: linear-gradient(90deg, #1b1b1b 50%, #ffff00 50%);
+    }
+    .btn-white-red{
+        background: linear-gradient(90deg, #fff 50%, #ff0000 50%);
+    }
+    .btn-white-green{
+        background: linear-gradient(90deg, #fff 50%, #00ff00 50%);
+    }
+    .btn-white-blue{
+        background: linear-gradient(90deg, #fff 50%, #0000ff 50%);
+    }
+    .btn-white-violet{
+        background: linear-gradient(90deg, #fff 50%, #8A2BE2 50%);
+    }
+
+    .btn-white-yellow{
+        background: linear-gradient(90deg, #fff 50%, #ffff00 50%);
+    }
     /* Default carousel  */
 
     .carousel-indicators img {
@@ -100,23 +146,25 @@
     }
 
     /* Default slide  */
-    .signup{
+    .signup, .error{
         padding: 150px 0;
     }
 
     .carousel{
-        background: #fff;
+        background: var(--background-color-2);
     }
 
     .home{
-        background: linear-gradient(158deg, rgba(27,27,27,1) 80%, rgba(255,255,255,1) 80%);
+        background: linear-gradient(158deg, var(--background-color-1) 80%, var(--background-color-2) 80%);
     }
 
     .about{
-        background: linear-gradient(158deg, rgba(27,27,27,1) 27.6%, rgba(255,255,255,1) 27.6%);
+        background: linear-gradient(158deg, var(--background-color-1) 27.6%, var(--background-color-2) 27.6%);
     }
 
     .contact{
-        background: linear-gradient(158deg, rgba(255,255,255,1) 45%, rgba(27,27,27,1) 45%);
+        background: linear-gradient(158deg, var(--background-color-2) 45%, var(--background-color-1) 45%);
     }
+    /* black && white || black && red || black && green || black && yellow || black && oramge  || white && red || white && green || white && yellow || white && oramge || white && violete || violete && black || */
 </style>
+
